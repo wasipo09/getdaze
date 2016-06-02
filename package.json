@@ -1,0 +1,20 @@
+{
+  "name": "getdaze",
+  "version": "0.0.1",
+  "description": "A super stupid web scraper",
+  "main": "getdaze.js",
+  "scripts": {
+    "test": "mocha test --timeout 2500"
+  },
+  "keywords": [
+    "scraper"
+  ],
+  "author": "Wasin P",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "moment": "^2.13.0"
+  }
+}
+
