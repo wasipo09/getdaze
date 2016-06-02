@@ -1,4 +1,6 @@
 # getdaze
+
+Get-to-da-ze (ゲットダゼ)
 A super stupid web scraper
 
 ## Installation
