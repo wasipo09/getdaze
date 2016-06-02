@@ -1,6 +1,6 @@
 {
   "name": "getdaze",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A super stupid web scraper",
   "main": "getdaze.js",
   "scripts": {
