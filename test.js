@@ -3,16 +3,16 @@ var getdaze = require('./getdaze');
 var assert = require('chai').assert;
 
 //Test parameters
-var url = "http://www.amazon.co.jp/gp/product/";
-var id = 'B002WN1MXC';
+var url = "http://wasipo09.github.io/";
+var id = 'getdaze';
 var elements = [{
-  type: 'id',
-  classid: 'productTitle',
+  type: 'class',
+  classid: 'project-name',
   key: "name"
 }, {
-  type: 'id',
-  classid: 'priceblock_ourprice',
-  key: "price"
+  type: 'class',
+  classid: 'project-tagline',
+  key: "tagline"
 }];
 
 //Test cases
@@ -34,7 +34,18 @@ describe('Data', function() {
           if (err) throw err;
 
           assert.typeOf(result['name'], 'string');
-          assert.typeOf(result['price'], 'string');
+          assert.typeOf(result['tagline'], 'string');
+          done();
+        });
+    });
+    it('should return correct results', function(done) {
+      getdaze.getJson(url,
+        id, elements,
+        function(err, result) {
+          if (err) throw err;
+
+          assert.equal('Getdaze',result['name']);
+          assert.equal('A super stupid web scraper',result['tagline']);
           done();
         });
     });
