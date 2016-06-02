@@ -34,7 +34,29 @@ A super stupid web scraper</p>
 <h2>
 <a id="sample" class="anchor" href="#sample" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample</h2>
 
-<p>To be added soon.</p>
+<pre><code>var getdaze = require("getdaze");
+
+//Test parameters
+var url = "http://www.amazon.co.jp/gp/product/";
+var ids = ['B00TEY2MFY','B00J86OXD2','B000HJPK2C'];
+var elements = [{
+  type: 'id',
+  classid: 'productTitle',
+  key: "name"
+}, {
+  type: 'id',
+  classid: 'priceblock_ourprice',
+  key: "price"
+}];
+
+for (var i of ids){
+ getdaze.getJson(url,
+        i, elements,
+        function(err, result) {
+     console.log(result);
+ });
+}
+</code></pre>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/wasipo09/getdaze">Getdaze</a> is maintained by <a href="https://github.com/wasipo09">wasipo09</a>.</span>

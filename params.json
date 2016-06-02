@@ -1,6 +1,6 @@
 {
   "name": "Getdaze",
   "tagline": "A super stupid web scraper",
-  "body": "# getdaze\r\n\r\nGet-to-da-ze (ゲットダゼ)\r\nA super stupid web scraper\r\n\r\n## Installation\r\n\r\n```\r\nnpm install getdaze\r\n```\r\n\r\n## Sample\r\n\r\nTo be added soon.\r\n",
+  "body": "# getdaze\r\n\r\nGet-to-da-ze (ゲットダゼ)\r\nA super stupid web scraper\r\n\r\n## Installation\r\n\r\n```\r\nnpm install getdaze\r\n```\r\n\r\n## Sample\r\n\r\n\r\n```\r\nvar getdaze = require(\"getdaze\");\r\n\r\n//Test parameters\r\nvar url = \"http://www.amazon.co.jp/gp/product/\";\r\nvar ids = ['B00TEY2MFY','B00J86OXD2','B000HJPK2C'];\r\nvar elements = [{\r\n  type: 'id',\r\n  classid: 'productTitle',\r\n  key: \"name\"\r\n}, {\r\n  type: 'id',\r\n  classid: 'priceblock_ourprice',\r\n  key: \"price\"\r\n}];\r\n\r\nfor (var i of ids){\r\n getdaze.getJson(url,\r\n        i, elements,\r\n        function(err, result) {\r\n     console.log(result);\r\n });\r\n}\r\n```\r\n\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
