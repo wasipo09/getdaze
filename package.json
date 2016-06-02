@@ -4,12 +4,16 @@
   "description": "A super stupid web scraper",
   "main": "getdaze.js",
   "scripts": {
-    "test": "mocha test --timeout 2500"
+    "test": "mocha test --timeout 3000"
   },
   "keywords": [
     "scraper"
   ],
-  "author": "Wasin P",
+  "author": "Wasin Pongmussaya",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasipo09/getdaze.git"
+  },
   "license": "MIT",
   "dependencies": {
     "chai": "^3.5.0",
