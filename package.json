@@ -1,6 +1,6 @@
 {
   "name": "getdaze",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A super stupid web scraper",
   "main": "getdaze.js",
   "scripts": {
@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "async": "^2.0.0-rc.5",
     "chai": "^3.5.0",
     "cheerio": "^0.20.0",
     "moment": "^2.13.0",
