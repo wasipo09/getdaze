@@ -34,6 +34,9 @@ A super stupid web scraper</p>
 <h2>
 <a id="sample" class="anchor" href="#sample" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample</h2>
 
+<h3>
+<a id="get-data-from-single-page" class="anchor" href="#get-data-from-single-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get data from single page</h3>
+
 <pre><code>var getdaze = require("getdaze");
 
 //Test parameters
@@ -49,13 +52,36 @@ var elements = [{
   key: "price"
 }];
 
-for (var i of ids){
  getdaze.getJson(url,
-        i, elements,
+        ids[0], elements,
         function(err, result) {
      console.log(result);
  });
-}
+</code></pre>
+
+<h3>
+<a id="get-data-from-multiple-pages" class="anchor" href="#get-data-from-multiple-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Get data from multiple pages</h3>
+
+<pre><code>var getdaze = require("getdaze");
+
+//Test parameters
+var url = "http://www.amazon.co.jp/gp/product/";
+var ids = ['B00TEY2MFY','B00J86OXD2','B000HJPK2C'];
+var elements = [{
+  type: 'id',
+  classid: 'productTitle',
+  key: "name"
+}, {
+  type: 'id',
+  classid: 'priceblock_ourprice',
+  key: "price"
+}];
+
+ getdaze.getJsonFromBatchId(url,
+        ids, elements,
+        function(result) {
+     console.log(result);
+ });
 </code></pre>
 
       <footer class="site-footer">
